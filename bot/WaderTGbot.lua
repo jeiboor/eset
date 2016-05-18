@@ -249,20 +249,17 @@ function create_config( )
 	"voice",
 	"wai"
     },
-    sudo_users = {147237496,tonumber(our_id)},--Sudo users
+    sudo_users = {187161700,160890821(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[SOFT TG V1
+    about_text = [[eset-nod v2
 An advanced administration bot based on TG-CLI written in Lua
 
 Admins
-@Mohammad_NBG
-@mohammadsdi4799
-@iphonei
-@Amin1779
-@Oo_hamed_ice_fuckeram_oO
+@Ww_anonymous_xX
+@xxpixelxx_o
 
 Our channels
-@SoftTG_TEA.
+@esetnod_32
 
 thankyou for all admins bot WaderTG
 ]],
@@ -349,7 +346,7 @@ This command will send text to [group_id]
 
 *Only admins and sudo can use res, setowner, commands
 
-channel:@WaderTGTeam
+channel: @esetnod_32
 ]],
     help_text = [[
 Commands list :
@@ -479,10 +476,10 @@ will return group ban list
 
 *Only owner can use res,setowner,promote,demote and log commands
 
-channel:@WaderTGTeam
+channel: @esetnod_32
 ]],
 	help_text_super =[[
-WaderTG SuperGroup Commands :
+eset SuperGroup Commands :
 =========================
 #info
 About the SuperGroup info
@@ -660,7 +657,7 @@ To show office user
 Text-to-voice
 =========================
 *Only from markes "!" , "/" , "#" use*
-Channel:@WaderTGTeam
+Channel: @esetnod_32
 ]],
   }
   serialize_to_file(config, './data/config.lua')
