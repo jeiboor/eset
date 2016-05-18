@@ -35,13 +35,13 @@ NONVOLUNTARYCHECK=0
 VOLUNTARY=1
 VOLUNTARYCHECK=0
 I=1
-BOT=WaderTG  # You can put here other bots. Also you can change it to run more than one bot in the same server.
+BOT=esenod  # You can put here other bots. Also you can change it to run more than one bot in the same server.
 RELOADTIME=10  # Time between checking cpu calls of the cli process. Set the value high if your bot does not receive lots of messages.
 
 
 function tmux_mode {
 
-sleep 0.5
+sleep 0.1
 clear
 # Space invaders thanks to github.com/windelicato
 f=3 b=4
@@ -76,7 +76,7 @@ sleep 1.2
 
 # Checking if the bot folder is in HOME
 echo -e "$bld$f4 CHECKING INSTALLED BOT...$rst"
-sleep 0.5
+sleep 0.1
 ls ../ | grep $BOT > /dev/null
 if [ $? != 0 ]; then
   echo -e "$f1 ERROR: BOT: $BOT NOT FOUND IN YOUR HOME DIRECTORY$rst"
@@ -84,17 +84,17 @@ if [ $? != 0 ]; then
   exit 1
 fi
 echo -e "$f2 $BOT FOUND IN YOUR HOME DIRECTORY$rst"
-sleep 0.5
+sleep 0.1
 
 
 sleep 1.5
 echo -e "$bld$f4 CHECKING PROCESSES...$rst"
-sleep 0.7
+sleep 0.1
 
 # Looks for the number of screen/telegram-cli processes
 CLINUM=`ps -e | grep -c telegram-cli`
 echo "$f2 RUNNING $CLINUM TELEGRAM-CLI PROCESS$rst"
-sleep 0.9
+sleep 0.1
 
 # =====Setup ends===== #
 
@@ -104,7 +104,7 @@ echo -e "$bld$f4 ATTACHING TMUX AS DAEMON...$rst"
 rm ../.telegram-cli/state  > /dev/null 
 # Nested TMUX sessions trick 
 TMUX= tmux new-session -d -s $BOT "./launch.sh"
-sleep 1.3
+sleep 0.1
 
 CLIPID=`ps -e | grep telegram-cli | head -1 | sed 's/^[[:space:]]*//' | cut -f 1 -d" "`
 echo -e "$f2 NEW TELEGRAM-CLI PROCESS: $CLIPID$rst"
@@ -186,7 +186,7 @@ done
 function screen_mode {
 
 clear
-sleep 0.5
+sleep 0.1
 
 # Space invaders thanks to github.com/windelicato
 f=3 b=4
